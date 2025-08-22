@@ -1,13 +1,12 @@
-import "./App.css";
-import MyHeader from "./components/Header";
-import TransactionList from "./components/TransactionList";
+import React from "react";
+import { TransactionProvider } from "./context/TransactionContext";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
-    <div>
-      <MyHeader />
-      <TransactionList />
-    </div>
+    <TransactionProvider>
+      <Dashboard />
+    </TransactionProvider>
   );
 }
 
